@@ -1,0 +1,1609 @@
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ /home/shania/.rbenv/versions/2.5.3/bin/rake:23
+  [1m[35m (36.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ /home/shania/.rbenv/versions/2.5.3/bin/rake:23
+  [1m[35m (7.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ /home/shania/.rbenv/versions/2.5.3/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/shania/.rbenv/versions/2.5.3/bin/rake:23
+Migrating to CreateClientWorkouts (20190603044019)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/shania/.rbenv/versions/2.5.3/bin/rake:23
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE TABLE "client_workouts" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "client_name" varchar, "trainer" varchar, "duration_mins" integer, "date_of_workout" date, "paid_amount" decimal, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190603044019_create_client_workouts.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190603044019"]]
+  ↳ /home/shania/.rbenv/versions/2.5.3/bin/rake:23
+  [1m[35m (17.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/shania/.rbenv/versions/2.5.3/bin/rake:23
+Migrating to CreateTrainers (20190606044638)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/shania/.rbenv/versions/2.5.3/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "trainers" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "address" varchar, "curr_weight" decimal, "height" decimal, "gender" varchar, "email_add" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190606044638_create_trainers.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190606044638"]]
+  ↳ /home/shania/.rbenv/versions/2.5.3/bin/rake:23
+  [1m[35m (7.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/shania/.rbenv/versions/2.5.3/bin/rake:23
+Migrating to CreateClients (20190606044654)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/shania/.rbenv/versions/2.5.3/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "clients" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "address" varchar, "curr_weight" decimal, "height" decimal, "gender" varchar, "email_add" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190606044654_create_clients.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190606044654"]]
+  ↳ /home/shania/.rbenv/versions/2.5.3/bin/rake:23
+  [1m[35m (6.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/shania/.rbenv/versions/2.5.3/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /home/shania/.rbenv/versions/2.5.3/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/shania/.rbenv/versions/2.5.3/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-06-06 15:02:12.714669"], ["updated_at", "2019-06-06 15:02:12.714669"]]
+  ↳ /home/shania/.rbenv/versions/2.5.3/bin/rake:23
+  [1m[35m (7.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/shania/.rbenv/versions/2.5.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/shania/.rbenv/versions/2.5.3/bin/rake:23
+Started GET "/" for 127.0.0.1 at 2019-06-06 23:02:28 +0800
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/shania/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/shania/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/shania/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb (3.1ms)
+Completed 200 OK in 31ms (Views: 7.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/client_workouts" for 127.0.0.1 at 2019-06-06 23:02:59 +0800
+Processing by ClientWorkoutsController#index as HTML
+  Rendering client_workouts/index.html.erb within layouts/application
+  [1m[36mClientWorkout Load (0.2ms)[0m  [1m[34mSELECT "client_workouts".* FROM "client_workouts"[0m
+  ↳ app/views/client_workouts/index.html.erb:19
+  Rendered client_workouts/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 3687ms (Views: 3681.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/client_workouts" for 127.0.0.1 at 2019-06-06 23:04:52 +0800
+Processing by ClientWorkoutsController#index as HTML
+  Rendering client_workouts/index.html.erb within layouts/application
+  [1m[36mClientWorkout Load (0.3ms)[0m  [1m[34mSELECT "client_workouts".* FROM "client_workouts"[0m
+  ↳ app/views/client_workouts/index.html.erb:24
+  Rendered client_workouts/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 41ms (Views: 39.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/client_workouts" for 127.0.0.1 at 2019-06-06 23:05:09 +0800
+Processing by ClientWorkoutsController#index as HTML
+  Rendering client_workouts/index.html.erb within layouts/application
+  [1m[36mClientWorkout Load (0.4ms)[0m  [1m[34mSELECT "client_workouts".* FROM "client_workouts"[0m
+  ↳ app/views/client_workouts/index.html.erb:24
+  Rendered client_workouts/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 48ms (Views: 45.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/client_workouts/new" for 127.0.0.1 at 2019-06-06 23:05:11 +0800
+Processing by ClientWorkoutsController#new as HTML
+  Rendering client_workouts/new.html.erb within layouts/application
+  Rendered client_workouts/_form.html.erb (147.5ms)
+  Rendered client_workouts/new.html.erb within layouts/application (150.3ms)
+Completed 200 OK in 227ms (Views: 212.0ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/client_workouts" for 127.0.0.1 at 2019-06-06 23:05:27 +0800
+Processing by ClientWorkoutsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Bwh9ykAuQuow/YWKsJbnh83BJ6q0Pjox1owvOmJHUqVFVwZeHb88bmidvwL78/zxJBxa//IFHLkn4KarYecp/A==", "client_workout"=>{"client_name"=>"Shania Aman", "trainer"=>"Alexa Chu", "duration_mins"=>"30", "date_of_workout(1i)"=>"2019", "date_of_workout(2i)"=>"6", "date_of_workout(3i)"=>"6", "paid_amount"=>"50"}, "commit"=>"Create Client workout"}
+  [1m[35m (1.7ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/client_workouts_controller.rb:39
+  [1m[36mClientWorkout Create (2.1ms)[0m  [1m[32mINSERT INTO "client_workouts" ("client_name", "trainer", "duration_mins", "date_of_workout", "paid_amount", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["client_name", "Shania Aman"], ["trainer", "Alexa Chu"], ["duration_mins", 30], ["date_of_workout", "2019-06-06"], ["paid_amount", 50.0], ["created_at", "2019-06-06 15:05:27.854563"], ["updated_at", "2019-06-06 15:05:27.854563"]]
+  ↳ app/controllers/client_workouts_controller.rb:39
+  [1m[35m (5.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/client_workouts_controller.rb:39
+Redirected to http://localhost:3000/client_workouts/1
+Completed 302 Found in 18ms (ActiveRecord: 8.8ms)
+
+
+Started GET "/client_workouts/1" for 127.0.0.1 at 2019-06-06 23:05:27 +0800
+Processing by ClientWorkoutsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mClientWorkout Load (0.3ms)[0m  [1m[34mSELECT  "client_workouts".* FROM "client_workouts" WHERE "client_workouts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/client_workouts_controller.rb:76
+  Rendering client_workouts/show.html.erb within layouts/application
+  Rendered client_workouts/show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 65ms (Views: 57.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/client_workouts" for 127.0.0.1 at 2019-06-06 23:05:29 +0800
+Processing by ClientWorkoutsController#index as HTML
+  Rendering client_workouts/index.html.erb within layouts/application
+  [1m[36mClientWorkout Load (0.3ms)[0m  [1m[34mSELECT "client_workouts".* FROM "client_workouts"[0m
+  ↳ app/views/client_workouts/index.html.erb:24
+  Rendered client_workouts/index.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 77ms (Views: 74.4ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/client_workouts/find" for 127.0.0.1 at 2019-06-06 23:05:33 +0800
+Processing by ClientWorkoutsController#find as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wJeDgnU2l/tu6fIGx5IexjKGqoDlLaNpnUufL9jHPVP4LX+6KwnYZepDxtdctH+T5g0xa2rnAd/0bJZB3jidwQ==", "search_string"=>"Shania Aman", "commit"=>"search"}
+  Rendering client_workouts/index.html.erb within layouts/application
+  [1m[36mClientWorkout Load (0.6ms)[0m  [1m[34mSELECT "client_workouts".* FROM "client_workouts" WHERE (LOWER(client_name) LIKE '%shania aman%')[0m
+  ↳ app/views/client_workouts/index.html.erb:24
+  Rendered client_workouts/index.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 47ms (Views: 45.4ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/client_workouts/find" for 127.0.0.1 at 2019-06-06 23:05:39 +0800
+Processing by ClientWorkoutsController#find as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ztzDGF2PUxPNvgzJqd6UDkRFKOCULffLq6aMaNQUvHp5aK+iqcJB7Ta6oQL1kLxXQu3sV75NvXUl5nrlCkkxrw==", "search_string"=>"Shan", "commit"=>"search"}
+  Rendering client_workouts/index.html.erb within layouts/application
+  [1m[36mClientWorkout Load (0.2ms)[0m  [1m[34mSELECT "client_workouts".* FROM "client_workouts" WHERE (LOWER(client_name) LIKE '%shan%')[0m
+  ↳ app/views/client_workouts/index.html.erb:24
+  Rendered client_workouts/index.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 40ms (Views: 39.4ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/client_workouts/find" for 127.0.0.1 at 2019-06-06 23:05:42 +0800
+Processing by ClientWorkoutsController#find as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VkFDmXQ/z7lsim157Tn/EGhIhxGsOTzdHNLzQwisLabh9S8jgHLdR5eOwLKxd9dJbuBDpoZZdmOSkgXO1vGgcw==", "search_string"=>"x", "commit"=>"search"}
+  Rendering client_workouts/index.html.erb within layouts/application
+  [1m[36mClientWorkout Load (0.5ms)[0m  [1m[34mSELECT "client_workouts".* FROM "client_workouts" WHERE (LOWER(client_name) LIKE '%x%')[0m
+  ↳ app/views/client_workouts/index.html.erb:24
+  Rendered client_workouts/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 61ms (Views: 59.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/clients" for 127.0.0.1 at 2019-06-06 23:08:43 +0800
+Processing by ClientsController#index as HTML
+  Rendering clients/index.html.erb within layouts/application
+  [1m[36mClient Load (0.2ms)[0m  [1m[34mSELECT "clients".* FROM "clients"[0m
+  ↳ app/views/clients/index.html.erb:26
+  Rendered clients/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 36ms (Views: 31.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/clients/new" for 127.0.0.1 at 2019-06-06 23:08:45 +0800
+Processing by ClientsController#new as HTML
+  Rendering clients/new.html.erb within layouts/application
+  Rendered clients/_form.html.erb (8.3ms)
+  Rendered clients/new.html.erb within layouts/application (10.2ms)
+Completed 200 OK in 79ms (Views: 58.3ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/clients" for 127.0.0.1 at 2019-06-06 23:09:14 +0800
+Processing by ClientsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ffvz+0LR5EZOF8FU+tfFHfftjcmgyK5TVLaH+h9rZ3mM/gJB2cxGV2s3IVCKirT0FxWnvWPpUJzTpSeRB4FRzA==", "client"=>{"name"=>"Shania Aman", "address"=>"San Felipe", "curr_weight"=>"50", "height"=>"170", "gender"=>"Female", "email_add"=>"saman@gbox.adnu.edu.ph"}, "commit"=>"Create Client"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/clients_controller.rb:37
+  [1m[36mClient Create (0.3ms)[0m  [1m[32mINSERT INTO "clients" ("name", "address", "curr_weight", "height", "gender", "email_add", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Shania Aman"], ["address", "San Felipe"], ["curr_weight", 50.0], ["height", 170.0], ["gender", "Female"], ["email_add", "saman@gbox.adnu.edu.ph"], ["created_at", "2019-06-06 15:09:14.567776"], ["updated_at", "2019-06-06 15:09:14.567776"]]
+  ↳ app/controllers/clients_controller.rb:37
+  [1m[35m (16.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/clients_controller.rb:37
+Redirected to http://localhost:3000/clients/1
+Completed 302 Found in 29ms (ActiveRecord: 17.2ms)
+
+
+Started GET "/clients/1" for 127.0.0.1 at 2019-06-06 23:09:14 +0800
+Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mClient Load (0.6ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/clients_controller.rb:74
+  Rendering clients/show.html.erb within layouts/application
+  Rendered clients/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 72ms (Views: 64.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/clients" for 127.0.0.1 at 2019-06-06 23:09:16 +0800
+Processing by ClientsController#index as HTML
+  Rendering clients/index.html.erb within layouts/application
+  [1m[36mClient Load (0.2ms)[0m  [1m[34mSELECT "clients".* FROM "clients"[0m
+  ↳ app/views/clients/index.html.erb:26
+  Rendered clients/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 66ms (Views: 64.0ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/client_workouts/find" for 127.0.0.1 at 2019-06-06 23:09:18 +0800
+Processing by ClientWorkoutsController#find as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"o9puIwi9+fn4fSz0vu2pJsNN3EaoE1f2vXXw7AXEXUubYJIbVoK2Z3zXGCUly8hzF8ZHrSfZ9UDUUvmCAzv92Q==", "search_string"=>"x", "commit"=>"search"}
+  Rendering client_workouts/index.html.erb within layouts/application
+  [1m[36mClientWorkout Load (0.3ms)[0m  [1m[34mSELECT "client_workouts".* FROM "client_workouts" WHERE (LOWER(client_name) LIKE '%x%')[0m
+  ↳ app/views/client_workouts/index.html.erb:24
+  Rendered client_workouts/index.html.erb within layouts/application (10.9ms)
+Completed 200 OK in 56ms (Views: 53.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/clients" for 127.0.0.1 at 2019-06-06 23:09:51 +0800
+Processing by ClientsController#index as HTML
+  Rendering clients/index.html.erb within layouts/application
+  [1m[36mClient Load (0.2ms)[0m  [1m[34mSELECT "clients".* FROM "clients"[0m
+  ↳ app/views/clients/index.html.erb:26
+  Rendered clients/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 36ms (Views: 34.4ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/clients/find" for 127.0.0.1 at 2019-06-06 23:09:53 +0800
+Processing by ClientsController#find as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Xg5vQD4RirP7r4/rm/OO5c+2j8YVLW0WeMebQYedXBjpugP6ylyYTQCrIiDHvaa8yR5LcT9NJ6j2h23MWcDRzQ==", "search_string"=>"x", "commit"=>"search"}
+  Rendering clients/index.html.erb within layouts/application
+  Rendered clients/index.html.erb within layouts/application (41.8ms)
+Completed 500 Internal Server Error in 62ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    23:   </thead>
+    24: 
+    25:   <tbody>
+    26:     <% @clients.each do |client| %>
+    27:       <tr>
+    28:         <td><%= client.name %></td>
+    29:         <td><%= client.address %></td>
+  
+app/views/clients/index.html.erb:26:in `_app_views_clients_index_html_erb__3180011200402657840_69873716336760'
+app/controllers/clients_controller.rb:8:in `find'
+Started POST "/clients/find" for 127.0.0.1 at 2019-06-06 23:13:23 +0800
+Processing by ClientsController#find as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Xg5vQD4RirP7r4/rm/OO5c+2j8YVLW0WeMebQYedXBjpugP6ylyYTQCrIiDHvaa8yR5LcT9NJ6j2h23MWcDRzQ==", "search_string"=>"x", "commit"=>"search"}
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (uninitialized constant ClientsController::Clients):
+  
+app/controllers/clients_controller.rb:5:in `find'
+Started POST "/clients/find" for 127.0.0.1 at 2019-06-06 23:13:34 +0800
+Processing by ClientsController#find as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Xg5vQD4RirP7r4/rm/OO5c+2j8YVLW0WeMebQYedXBjpugP6ylyYTQCrIiDHvaa8yR5LcT9NJ6j2h23MWcDRzQ==", "search_string"=>"x", "commit"=>"search"}
+  Rendering clients/index.html.erb within layouts/application
+  [1m[36mClient Load (1.6ms)[0m  [1m[34mSELECT "clients".* FROM "clients" WHERE (LOWER(client_name) LIKE '%x%')[0m
+  ↳ app/views/clients/index.html.erb:26
+  Rendered clients/index.html.erb within layouts/application (6.9ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 1.6ms)
+
+
+  
+ActionView::Template::Error (SQLite3::SQLException: no such column: client_name: SELECT "clients".* FROM "clients" WHERE (LOWER(client_name) LIKE '%x%')):
+    23:   </thead>
+    24: 
+    25:   <tbody>
+    26:     <% @clients.each do |client| %>
+    27:       <tr>
+    28:         <td><%= client.name %></td>
+    29:         <td><%= client.address %></td>
+  
+app/views/clients/index.html.erb:26:in `_app_views_clients_index_html_erb__3180011200402657840_69873652152180'
+app/controllers/clients_controller.rb:8:in `find'
+Started GET "/clients" for 127.0.0.1 at 2019-06-06 23:13:44 +0800
+Processing by ClientsController#index as HTML
+  Rendering clients/index.html.erb within layouts/application
+  [1m[36mClient Load (0.4ms)[0m  [1m[34mSELECT "clients".* FROM "clients"[0m
+  ↳ app/views/clients/index.html.erb:26
+  Rendered clients/index.html.erb within layouts/application (31.7ms)
+Completed 200 OK in 68ms (Views: 64.5ms | ActiveRecord: 2.0ms)
+
+
+Started POST "/clients/find" for 127.0.0.1 at 2019-06-06 23:14:44 +0800
+Processing by ClientsController#find as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XzxMj9U+zuFT2h3mZY/ljYFy1LJumzZnK0DAZQ7htVToiCA1IXPcH6jesC05wc3Uh9oQBUT7fNmlADbo0Lw4gQ==", "search_string"=>"shan", "commit"=>"search"}
+  Rendering clients/index.html.erb within layouts/application
+  [1m[36mClient Load (0.3ms)[0m  [1m[34mSELECT "clients".* FROM "clients" WHERE (LOWER(name) LIKE '%shan%')[0m
+  ↳ app/views/clients/index.html.erb:26
+  Rendered clients/index.html.erb within layouts/application (15.3ms)
+Completed 200 OK in 51ms (Views: 47.4ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/clients/find" for 127.0.0.1 at 2019-06-06 23:14:47 +0800
+Processing by ClientsController#find as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tF+XdoOa4ixIKGzJA+XdQAdL2n5+/DXH0jC2ZqdcVGAD6/vMd9fw0rMswQJfq/UZAeMeyVScf3lccEDreQHZtQ==", "search_string"=>"x", "commit"=>"search"}
+  Rendering clients/index.html.erb within layouts/application
+  [1m[36mClient Load (0.3ms)[0m  [1m[34mSELECT "clients".* FROM "clients" WHERE (LOWER(name) LIKE '%x%')[0m
+  ↳ app/views/clients/index.html.erb:26
+  Rendered clients/index.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 48ms (Views: 46.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/trainers" for 127.0.0.1 at 2019-06-06 23:17:37 +0800
+Processing by TrainersController#index as HTML
+  Rendering trainers/index.html.erb within layouts/application
+  [1m[36mTrainer Load (0.3ms)[0m  [1m[34mSELECT "trainers".* FROM "trainers"[0m
+  ↳ app/views/trainers/index.html.erb:26
+  Rendered trainers/index.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 38ms (Views: 31.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/trainers/new" for 127.0.0.1 at 2019-06-06 23:17:40 +0800
+Processing by TrainersController#new as HTML
+  Rendering trainers/new.html.erb within layouts/application
+  Rendered trainers/_form.html.erb (5.4ms)
+  Rendered trainers/new.html.erb within layouts/application (8.8ms)
+Completed 200 OK in 73ms (Views: 55.2ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/trainers" for 127.0.0.1 at 2019-06-06 23:18:01 +0800
+Processing by TrainersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TF0l2DXJnAdGFO8mLlH8e2nLxXso+Qo8MWkLJTvrhcy+k5I6sMiCyzIBr3mH2/XpS8FhZiXnRXLz2rK+rye6eQ==", "trainer"=>{"name"=>"Alexa Chu", "address"=>"Pacol", "curr_weight"=>"48", "height"=>"180", "gender"=>"Femail", "email_add"=>"alexachu@gmail.com"}, "commit"=>"Create Trainer"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/trainers_controller.rb:37
+  [1m[36mTrainer Create (0.4ms)[0m  [1m[32mINSERT INTO "trainers" ("name", "address", "curr_weight", "height", "gender", "email_add", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Alexa Chu"], ["address", "Pacol"], ["curr_weight", 48.0], ["height", 180.0], ["gender", "Femail"], ["email_add", "alexachu@gmail.com"], ["created_at", "2019-06-06 15:18:01.030139"], ["updated_at", "2019-06-06 15:18:01.030139"]]
+  ↳ app/controllers/trainers_controller.rb:37
+  [1m[35m (25.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/trainers_controller.rb:37
+Redirected to http://localhost:3000/trainers/1
+Completed 302 Found in 34ms (ActiveRecord: 26.2ms)
+
+
+Started GET "/trainers/1" for 127.0.0.1 at 2019-06-06 23:18:01 +0800
+Processing by TrainersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTrainer Load (0.3ms)[0m  [1m[34mSELECT  "trainers".* FROM "trainers" WHERE "trainers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/trainers_controller.rb:74
+  Rendering trainers/show.html.erb within layouts/application
+  Rendered trainers/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 49ms (Views: 44.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/trainers" for 127.0.0.1 at 2019-06-06 23:18:03 +0800
+Processing by TrainersController#index as HTML
+  Rendering trainers/index.html.erb within layouts/application
+  [1m[36mTrainer Load (0.1ms)[0m  [1m[34mSELECT "trainers".* FROM "trainers"[0m
+  ↳ app/views/trainers/index.html.erb:26
+  Rendered trainers/index.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 65ms (Views: 62.6ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/trainers/find" for 127.0.0.1 at 2019-06-06 23:18:06 +0800
+Processing by TrainersController#find as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xtQ5k5cUJMLLviXroC5iUif8NkP0sNe4yO9jV9lhc1IJvw3mH8ONK+qw3lJC81iTvcXkkokLMkXyBUWeP8CNzA==", "search_string"=>"zz", "commit"=>"search"}
+  Rendering trainers/index.html.erb within layouts/application
+  [1m[36mTrainer Load (0.4ms)[0m  [1m[34mSELECT "trainers".* FROM "trainers" WHERE (LOWER(name) LIKE '%zz%')[0m
+  ↳ app/views/trainers/index.html.erb:26
+  Rendered trainers/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 40ms (Views: 38.1ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/trainers/find" for 127.0.0.1 at 2019-06-06 23:18:09 +0800
+Processing by TrainersController#find as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WUZJkflEVLA8TYpT32wj+KPKNXEvYEMAiFTvedhy8+7u8iUrDQlGTsdJJ5iDIguhpWLxxgUACb4GFBn0Bi9+Ow==", "search_string"=>"alexa", "commit"=>"search"}
+  Rendering trainers/index.html.erb within layouts/application
+  [1m[36mTrainer Load (0.4ms)[0m  [1m[34mSELECT "trainers".* FROM "trainers" WHERE (LOWER(name) LIKE '%alexa%')[0m
+  ↳ app/views/trainers/index.html.erb:26
+  Rendered trainers/index.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 72ms (Views: 70.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/client_workouts" for 127.0.0.1 at 2019-06-06 23:18:24 +0800
+Processing by ClientWorkoutsController#index as HTML
+  Rendering client_workouts/index.html.erb within layouts/application
+  [1m[36mClientWorkout Load (0.4ms)[0m  [1m[34mSELECT "client_workouts".* FROM "client_workouts"[0m
+  ↳ app/views/client_workouts/index.html.erb:24
+  Rendered client_workouts/index.html.erb within layouts/application (26.6ms)
+Completed 200 OK in 96ms (Views: 87.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/clients/find/Shania%20Aman" for 127.0.0.1 at 2019-06-06 23:20:04 +0800
+  
+ActionController::RoutingError (No route matches [GET] "/clients/find/Shania%20Aman"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/client_workouts" for 127.0.0.1 at 2019-06-06 23:20:09 +0800
+Processing by ClientWorkoutsController#index as HTML
+  Rendering client_workouts/index.html.erb within layouts/application
+  [1m[36mClientWorkout Load (0.2ms)[0m  [1m[34mSELECT "client_workouts".* FROM "client_workouts"[0m
+  ↳ app/views/client_workouts/index.html.erb:24
+  Rendered client_workouts/index.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 53ms (Views: 51.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/clients/find/Shania%20Aman" for 127.0.0.1 at 2019-06-06 23:20:38 +0800
+  
+ActionController::RoutingError (No route matches [GET] "/clients/find/Shania%20Aman"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/client_workouts" for 127.0.0.1 at 2019-06-06 23:20:59 +0800
+Processing by ClientWorkoutsController#index as HTML
+  Rendering client_workouts/index.html.erb within layouts/application
+  [1m[36mClientWorkout Load (0.3ms)[0m  [1m[34mSELECT "client_workouts".* FROM "client_workouts"[0m
+  ↳ app/views/client_workouts/index.html.erb:24
+  Rendered client_workouts/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 48ms (Views: 45.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/clients/find" for 127.0.0.1 at 2019-06-06 23:21:02 +0800
+Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"find"}
+  [1m[36mClient Load (0.3ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/clients_controller.rb:74
+Completed 404 Not Found in 12ms (ActiveRecord: 1.4ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Client with 'id'=find):
+  
+app/controllers/clients_controller.rb:74:in `set_client'
+Started GET "/client_workouts" for 127.0.0.1 at 2019-06-06 23:21:24 +0800
+Processing by ClientWorkoutsController#index as HTML
+  Rendering client_workouts/index.html.erb within layouts/application
+  [1m[36mClientWorkout Load (0.3ms)[0m  [1m[34mSELECT "client_workouts".* FROM "client_workouts"[0m
+  ↳ app/views/client_workouts/index.html.erb:24
+  Rendered client_workouts/index.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 56ms (Views: 53.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/client_workouts/1" for 127.0.0.1 at 2019-06-06 23:34:27 +0800
+Processing by ClientWorkoutsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mClientWorkout Load (0.4ms)[0m  [1m[34mSELECT  "client_workouts".* FROM "client_workouts" WHERE "client_workouts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/client_workouts_controller.rb:76
+  Rendering client_workouts/show.html.erb within layouts/application
+  Rendered client_workouts/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 57ms (Views: 36.8ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/clients/find" for 127.0.0.1 at 2019-06-06 23:35:45 +0800
+Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"find"}
+  [1m[36mClient Load (0.3ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/clients_controller.rb:74
+Completed 404 Not Found in 8ms (ActiveRecord: 1.1ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Client with 'id'=find):
+  
+app/controllers/clients_controller.rb:74:in `set_client'
+Started GET "/client_workouts" for 127.0.0.1 at 2019-06-06 23:35:53 +0800
+Processing by ClientWorkoutsController#index as HTML
+  Rendering client_workouts/index.html.erb within layouts/application
+  [1m[36mClientWorkout Load (0.3ms)[0m  [1m[34mSELECT "client_workouts".* FROM "client_workouts"[0m
+  ↳ app/views/client_workouts/index.html.erb:24
+  Rendered client_workouts/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 54ms (Views: 51.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/clients/find" for 127.0.0.1 at 2019-06-06 23:36:54 +0800
+Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"find"}
+  [1m[36mClient Load (0.1ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/clients_controller.rb:74
+Completed 404 Not Found in 2ms (ActiveRecord: 0.1ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Client with 'id'=find):
+  
+app/controllers/clients_controller.rb:74:in `set_client'
+Started GET "/client_workouts" for 127.0.0.1 at 2019-06-06 23:36:56 +0800
+Processing by ClientWorkoutsController#index as HTML
+  Rendering client_workouts/index.html.erb within layouts/application
+  [1m[36mClientWorkout Load (0.2ms)[0m  [1m[34mSELECT "client_workouts".* FROM "client_workouts"[0m
+  ↳ app/views/client_workouts/index.html.erb:24
+  Rendered client_workouts/index.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 58ms (Views: 55.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/client_workouts" for 127.0.0.1 at 2019-06-06 23:36:58 +0800
+Processing by ClientWorkoutsController#index as HTML
+  Rendering client_workouts/index.html.erb within layouts/application
+  [1m[36mClientWorkout Load (0.4ms)[0m  [1m[34mSELECT "client_workouts".* FROM "client_workouts"[0m
+  ↳ app/views/client_workouts/index.html.erb:24
+  Rendered client_workouts/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 46ms (Views: 43.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/client_workouts/1" for 127.0.0.1 at 2019-06-06 23:37:00 +0800
+Processing by ClientWorkoutsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mClientWorkout Load (0.4ms)[0m  [1m[34mSELECT  "client_workouts".* FROM "client_workouts" WHERE "client_workouts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/client_workouts_controller.rb:76
+  Rendering client_workouts/show.html.erb within layouts/application
+  Rendered client_workouts/show.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 65ms (Views: 62.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/client_workouts" for 127.0.0.1 at 2019-06-06 23:51:48 +0800
+Processing by ClientWorkoutsController#index as HTML
+  Rendering client_workouts/index.html.erb within layouts/application
+  [1m[36mClientWorkout Load (0.7ms)[0m  [1m[34mSELECT "client_workouts".* FROM "client_workouts"[0m
+  ↳ app/views/client_workouts/index.html.erb:24
+  Rendered client_workouts/index.html.erb within layouts/application (25.7ms)
+Completed 200 OK in 77ms (Views: 69.3ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/client_workouts/1" for 127.0.0.1 at 2019-06-06 23:51:51 +0800
+Processing by ClientWorkoutsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mClientWorkout Load (0.6ms)[0m  [1m[34mSELECT  "client_workouts".* FROM "client_workouts" WHERE "client_workouts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/client_workouts_controller.rb:76
+  Rendering client_workouts/show.html.erb within layouts/application
+  Rendered client_workouts/show.html.erb within layouts/application (9.5ms)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+     5:   <%= @client_workout.client_name %>
+     6: </p>
+     7: 
+     8: <%= render "client_show", ClientWorkout.where(@client_workout.client_name == @client.name) %>
+     9: 
+    10: <p>
+    11:   <strong>Trainer:</strong>
+  
+app/views/client_workouts/show.html.erb:8:in `_app_views_client_workouts_show_html_erb___3140498285460571263_69873715850920'
+Started GET "/client_workouts/1" for 127.0.0.1 at 2019-06-06 23:59:55 +0800
+Processing by ClientWorkoutsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mClientWorkout Load (0.3ms)[0m  [1m[34mSELECT  "client_workouts".* FROM "client_workouts" WHERE "client_workouts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/client_workouts_controller.rb:76
+  Rendering client_workouts/show.html.erb within layouts/application
+  Rendered client_workouts/show.html.erb within layouts/application (533.7ms)
+Completed 500 Internal Server Error in 540ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `client_name' for #<#<Class:0x00007f19751a3ef8>:0x00007f19761aac48>
+Did you mean?  client_path):
+     5:   <%= @client_workout.client_name %>
+     6: </p>
+     7: 
+     8: <%= render "client_list", client_workouts: ClientWorkout.where(client_name == @client.name) %>
+     9: 
+    10: <p>
+    11:   <strong>Trainer:</strong>
+  
+app/views/client_workouts/show.html.erb:8:in `_app_views_client_workouts_show_html_erb___3140498285460571263_69873666186000'
+Started GET "/client_workouts/1" for 127.0.0.1 at 2019-06-07 00:00:09 +0800
+Processing by ClientWorkoutsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mClientWorkout Load (0.2ms)[0m  [1m[34mSELECT  "client_workouts".* FROM "client_workouts" WHERE "client_workouts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/client_workouts_controller.rb:76
+  Rendering client_workouts/show.html.erb within layouts/application
+  Rendered client_workouts/_client_list.html.erb (476.6ms)
+  Rendered client_workouts/show.html.erb within layouts/application (479.8ms)
+Completed 500 Internal Server Error in 485ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `clients' for #<#<Class:0x00007f19751a3ef8>:0x0000563cd94ffcd8>
+Did you mean?  clients_url):
+    23:   </thead>
+    24: 
+    25:   <tbody>
+    26:     <% clients.each do |client| %>
+    27:       <tr>
+    28:         <td><%= client.name %></td>
+    29:         <td><%= client.address %></td>
+  
+app/views/client_workouts/_client_list.html.erb:26:in `_app_views_client_workouts__client_list_html_erb___2633586080087427941_47409669092940'
+app/views/client_workouts/show.html.erb:8:in `_app_views_client_workouts_show_html_erb___3140498285460571263_47409672047300'
+Started GET "/client_workouts/1" for 127.0.0.1 at 2019-06-07 00:00:40 +0800
+Processing by ClientWorkoutsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mClientWorkout Load (0.3ms)[0m  [1m[34mSELECT  "client_workouts".* FROM "client_workouts" WHERE "client_workouts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/client_workouts_controller.rb:76
+  Rendering client_workouts/show.html.erb within layouts/application
+  Rendered client_workouts/_client_list.html.erb (443.8ms)
+  Rendered client_workouts/show.html.erb within layouts/application (447.1ms)
+Completed 500 Internal Server Error in 455ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `client' for #<#<Class:0x00007f19751a3ef8>:0x00007f19760d5048>
+Did you mean?  client_url):
+    23:   </thead>
+    24: 
+    25:   <tbody>
+    26:     <% client.each do |client| %>
+    27:       <tr>
+    28:         <td><%= client.name %></td>
+    29:         <td><%= client.address %></td>
+  
+app/views/client_workouts/_client_list.html.erb:26:in `_app_views_client_workouts__client_list_html_erb___2633586080087427941_69873665712660'
+app/views/client_workouts/show.html.erb:8:in `_app_views_client_workouts_show_html_erb___3140498285460571263_69873665748180'
+Started GET "/client_workouts/1" for 127.0.0.1 at 2019-06-07 00:01:22 +0800
+Processing by ClientWorkoutsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mClientWorkout Load (0.2ms)[0m  [1m[34mSELECT  "client_workouts".* FROM "client_workouts" WHERE "client_workouts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/client_workouts_controller.rb:76
+  Rendering client_workouts/show.html.erb within layouts/application
+  Rendered client_workouts/show.html.erb within layouts/application (8.6ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (uninitialized constant ActionView::CompiledTemplates::Clients):
+     5:   <%= @client_workout.client_name %>
+     6: </p>
+     7: 
+     8: <%= render "client_list", clients: Clients.all %>
+     9: 
+    10: <p>
+    11:   <strong>Trainer:</strong>
+  
+app/views/client_workouts/show.html.erb:8:in `_app_views_client_workouts_show_html_erb___3140498285460571263_69873667001960'
+Started GET "/client_workouts/1" for 127.0.0.1 at 2019-06-07 00:02:10 +0800
+Processing by ClientWorkoutsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mClientWorkout Load (0.1ms)[0m  [1m[34mSELECT  "client_workouts".* FROM "client_workouts" WHERE "client_workouts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/client_workouts_controller.rb:76
+  Rendering client_workouts/show.html.erb within layouts/application
+  [1m[36mClient Load (0.4ms)[0m  [1m[34mSELECT "clients".* FROM "clients"[0m
+  ↳ app/views/client_workouts/_client_list.html.erb:26
+  Rendered client_workouts/_client_list.html.erb (26.8ms)
+  Rendered client_workouts/show.html.erb within layouts/application (45.5ms)
+Completed 200 OK in 91ms (Views: 86.5ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/client_workouts/1" for 127.0.0.1 at 2019-06-07 00:03:29 +0800
+Processing by ClientWorkoutsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mClientWorkout Load (0.2ms)[0m  [1m[34mSELECT  "client_workouts".* FROM "client_workouts" WHERE "client_workouts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/client_workouts_controller.rb:76
+  Rendering client_workouts/show.html.erb within layouts/application
+  Rendered client_workouts/show.html.erb within layouts/application (4.2ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+     5:   <%= @client_workout.client_name %>
+     6: </p>
+     7: 
+     8: <%= render "client_list", clients: Client.where(client_name: @client.name) %>
+     9: 
+    10: <p>
+    11:   <strong>Trainer:</strong>
+  
+app/views/client_workouts/show.html.erb:8:in `_app_views_client_workouts_show_html_erb___3140498285460571263_69873657143900'
+Started GET "/client_workouts/1" for 127.0.0.1 at 2019-06-07 00:04:40 +0800
+Processing by ClientWorkoutsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mClientWorkout Load (0.4ms)[0m  [1m[34mSELECT  "client_workouts".* FROM "client_workouts" WHERE "client_workouts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/client_workouts_controller.rb:76
+  Rendering client_workouts/show.html.erb within layouts/application
+  [1m[36mClient Load (0.3ms)[0m  [1m[34mSELECT "clients".* FROM "clients" WHERE "clients"."name" = ?[0m  [["name", "Shania Aman"]]
+  ↳ app/views/client_workouts/_client_list.html.erb:26
+  Rendered client_workouts/_client_list.html.erb (3.5ms)
+  Rendered client_workouts/show.html.erb within layouts/application (14.2ms)
+Completed 200 OK in 280ms (Views: 276.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/client_workouts/1" for 127.0.0.1 at 2019-06-07 00:04:52 +0800
+Processing by ClientWorkoutsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mClientWorkout Load (0.1ms)[0m  [1m[34mSELECT  "client_workouts".* FROM "client_workouts" WHERE "client_workouts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/client_workouts_controller.rb:76
+  Rendering client_workouts/show.html.erb within layouts/application
+  [1m[36mClient Load (0.1ms)[0m  [1m[34mSELECT "clients".* FROM "clients" WHERE "clients"."name" = ?[0m  [["name", "XYZ"]]
+  ↳ app/views/client_workouts/_client_list.html.erb:26
+  Rendered client_workouts/_client_list.html.erb (3.9ms)
+  Rendered client_workouts/show.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 55ms (Views: 52.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/client_workouts/1" for 127.0.0.1 at 2019-06-07 00:05:47 +0800
+Processing by ClientWorkoutsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mClientWorkout Load (93.9ms)[0m  [1m[34mSELECT  "client_workouts".* FROM "client_workouts" WHERE "client_workouts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/client_workouts_controller.rb:76
+  Rendering client_workouts/show.html.erb within layouts/application
+  Rendered client_workouts/show.html.erb within layouts/application (5.3ms)
+Completed 500 Internal Server Error in 105ms (ActiveRecord: 93.9ms)
+
+
+  
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+     5:   <%= @client_workout.client_name %>
+     6: </p>
+     7: 
+     8: <%= render "client_list", clients: Client.where(name: @client_workouts.name) %>
+     9: 
+    10: <p>
+    11:   <strong>Trainer:</strong>
+  
+app/views/client_workouts/show.html.erb:8:in `_app_views_client_workouts_show_html_erb___3140498285460571263_69873662116240'
+Started GET "/client_workouts/1" for 127.0.0.1 at 2019-06-07 00:06:06 +0800
+Processing by ClientWorkoutsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mClientWorkout Load (0.2ms)[0m  [1m[34mSELECT  "client_workouts".* FROM "client_workouts" WHERE "client_workouts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/client_workouts_controller.rb:76
+  Rendering client_workouts/show.html.erb within layouts/application
+  Rendered client_workouts/show.html.erb within layouts/application (6.2ms)
+Completed 500 Internal Server Error in 61ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `client_name' for nil:NilClass):
+     5:   <%= @client_workout.client_name %>
+     6: </p>
+     7: 
+     8: <%= render "client_list", clients: Client.where(name: @client_workouts.client_name) %>
+     9: 
+    10: <p>
+    11:   <strong>Trainer:</strong>
+  
+app/views/client_workouts/show.html.erb:8:in `_app_views_client_workouts_show_html_erb___3140498285460571263_69873666027960'
+Started GET "/client_workouts/1" for 127.0.0.1 at 2019-06-07 00:06:34 +0800
+Processing by ClientWorkoutsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mClientWorkout Load (0.2ms)[0m  [1m[34mSELECT  "client_workouts".* FROM "client_workouts" WHERE "client_workouts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/client_workouts_controller.rb:76
+  Rendering client_workouts/show.html.erb within layouts/application
+  [1m[36mClient Load (89.1ms)[0m  [1m[34mSELECT "clients".* FROM "clients" WHERE "clients"."name" = ?[0m  [["name", "Shania Aman"]]
+  ↳ app/views/client_workouts/_client_list.html.erb:26
+  Rendered client_workouts/_client_list.html.erb (93.0ms)
+  Rendered client_workouts/show.html.erb within layouts/application (121.0ms)
+Completed 200 OK in 1257ms (Views: 1164.9ms | ActiveRecord: 89.3ms)
+
+
+Started GET "/clients/1" for 127.0.0.1 at 2019-06-07 00:07:19 +0800
+Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mClient Load (0.5ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/clients_controller.rb:74
+  Rendering clients/show.html.erb within layouts/application
+  Rendered clients/show.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 73ms (Views: 43.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/client_workouts" for 127.0.0.1 at 2019-06-07 00:17:03 +0800
+Processing by ClientWorkoutsController#index as HTML
+  Rendering client_workouts/index.html.erb within layouts/application
+  [1m[36mClientWorkout Load (6.1ms)[0m  [1m[34mSELECT "client_workouts".* FROM "client_workouts"[0m
+  ↳ app/views/client_workouts/index.html.erb:24
+  Rendered client_workouts/index.html.erb within layouts/application (31.0ms)
+Completed 200 OK in 67ms (Views: 53.0ms | ActiveRecord: 7.5ms)
+
+
+Started GET "/client_workouts/client_info" for 127.0.0.1 at 2019-06-07 00:17:06 +0800
+Processing by ClientWorkoutsController#show as HTML
+  Parameters: {"id"=>"client_info"}
+  [1m[36mClientWorkout Load (0.3ms)[0m  [1m[34mSELECT  "client_workouts".* FROM "client_workouts" WHERE "client_workouts"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/client_workouts_controller.rb:79
+Completed 404 Not Found in 5ms (ActiveRecord: 0.3ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find ClientWorkout with 'id'=client_info):
+  
+app/controllers/client_workouts_controller.rb:79:in `set_client_workout'
+Started GET "/client_workouts" for 127.0.0.1 at 2019-06-07 00:19:08 +0800
+Processing by ClientWorkoutsController#index as HTML
+  Rendering client_workouts/index.html.erb within layouts/application
+  [1m[36mClientWorkout Load (0.6ms)[0m  [1m[34mSELECT "client_workouts".* FROM "client_workouts"[0m
+  ↳ app/views/client_workouts/index.html.erb:24
+  Rendered client_workouts/index.html.erb within layouts/application (487.3ms)
+Completed 500 Internal Server Error in 495ms (ActiveRecord: 2.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `client_workouts' for #<#<Class:0x00007f197636e5e8>:0x00007f1976364188>
+Did you mean?  client_workout
+               @client_workouts
+               client_workouts_url
+               client_workout_url):
+    23:   <tbody>
+    24:     <% @client_workouts.each do |client_workout| %>
+    25:       <tr>
+    26:         <td><a href="client_workouts/client_info/<%= client_workouts.id%>"><%= client_workout.client_name %></a></td>
+    27:         <td><%= client_workout.trainer %></td>
+    28:         <td><%= client_workout.duration_mins %></td>
+    29:         <td><%= client_workout.date_of_workout %></td>
+  
+app/views/client_workouts/index.html.erb:26:in `block in _app_views_client_workouts_index_html_erb__2070167683522511973_69873667118160'
+app/views/client_workouts/index.html.erb:24:in `_app_views_client_workouts_index_html_erb__2070167683522511973_69873667118160'
+Started GET "/client_workouts" for 127.0.0.1 at 2019-06-07 00:19:14 +0800
+Processing by ClientWorkoutsController#index as HTML
+  Rendering client_workouts/index.html.erb within layouts/application
+  [1m[36mClientWorkout Load (0.2ms)[0m  [1m[34mSELECT "client_workouts".* FROM "client_workouts"[0m
+  ↳ app/views/client_workouts/index.html.erb:24
+  Rendered client_workouts/index.html.erb within layouts/application (435.5ms)
+Completed 500 Internal Server Error in 439ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `client_workouts' for #<#<Class:0x00007f197636e5e8>:0x00007f19755306e8>
+Did you mean?  client_workout
+               @client_workouts
+               client_workouts_url
+               client_workout_url):
+    23:   <tbody>
+    24:     <% @client_workouts.each do |client_workout| %>
+    25:       <tr>
+    26:         <td><a href="client_workouts/client_info/<%= client_workouts.id%>"><%= client_workout.client_name %></a></td>
+    27:         <td><%= client_workout.trainer %></td>
+    28:         <td><%= client_workout.duration_mins %></td>
+    29:         <td><%= client_workout.date_of_workout %></td>
+  
+app/views/client_workouts/index.html.erb:26:in `block in _app_views_client_workouts_index_html_erb__2070167683522511973_69873659646120'
+app/views/client_workouts/index.html.erb:24:in `_app_views_client_workouts_index_html_erb__2070167683522511973_69873659646120'
+Started GET "/client_workouts" for 127.0.0.1 at 2019-06-07 00:20:10 +0800
+Processing by ClientWorkoutsController#index as HTML
+  Rendering client_workouts/index.html.erb within layouts/application
+  [1m[36mClientWorkout Load (0.2ms)[0m  [1m[34mSELECT "client_workouts".* FROM "client_workouts"[0m
+  ↳ app/views/client_workouts/index.html.erb:24
+  Rendered client_workouts/index.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 56ms (Views: 54.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/client_workouts/client_info/1" for 127.0.0.1 at 2019-06-07 00:20:12 +0800
+Processing by ClientWorkoutsController#info as HTML
+  Parameters: {"id"=>"1"}
+Completed 406 Not Acceptable in 52ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::UnknownFormat (ClientWorkoutsController#info is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+actionpack (5.2.3) lib/action_controller/metal/implicit_render.rb:55:in `default_render'
+actionpack (5.2.3) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+actionpack (5.2.3) lib/action_controller/metal/basic_implicit_render.rb:6:in `tap'
+actionpack (5.2.3) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (5.2.3) lib/abstract_controller/base.rb:194:in `process_action'
+actionpack (5.2.3) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.2.3) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (5.2.3) lib/active_support/callbacks.rb:132:in `run_callbacks'
+actionpack (5.2.3) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.3) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.3) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.3) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.3) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.3) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.3) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.3) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.3) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.3) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.3) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.3) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.3) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.7) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.7) lib/rack/etag.rb:25:in `call'
+rack (2.0.7) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.7) lib/rack/head.rb:12:in `call'
+actionpack (5.2.3) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.7) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.7) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.3) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/client_workouts/client_info/1" for 127.0.0.1 at 2019-06-07 00:21:11 +0800
+Processing by ClientWorkoutsController#info as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mClientWorkout Load (0.3ms)[0m  [1m[34mSELECT  "client_workouts".* FROM "client_workouts" WHERE "client_workouts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/client_workouts_controller.rb:20
+Completed 406 Not Acceptable in 57ms (ActiveRecord: 2.0ms)
+
+
+  
+ActionController::UnknownFormat (ClientWorkoutsController#info is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+actionpack (5.2.3) lib/action_controller/metal/implicit_render.rb:55:in `default_render'
+actionpack (5.2.3) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+actionpack (5.2.3) lib/action_controller/metal/basic_implicit_render.rb:6:in `tap'
+actionpack (5.2.3) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (5.2.3) lib/abstract_controller/base.rb:194:in `process_action'
+actionpack (5.2.3) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.2.3) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (5.2.3) lib/active_support/callbacks.rb:132:in `run_callbacks'
+actionpack (5.2.3) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.3) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.3) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.3) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.3) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.3) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.3) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.3) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.3) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.3) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.3) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.3) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.3) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.7) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.7) lib/rack/etag.rb:25:in `call'
+rack (2.0.7) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.7) lib/rack/head.rb:12:in `call'
+actionpack (5.2.3) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.7) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.7) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.3) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/client_workouts/client_info/1" for 127.0.0.1 at 2019-06-07 00:21:13 +0800
+Processing by ClientWorkoutsController#info as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mClientWorkout Load (0.1ms)[0m  [1m[34mSELECT  "client_workouts".* FROM "client_workouts" WHERE "client_workouts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/client_workouts_controller.rb:20
+Completed 406 Not Acceptable in 38ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionController::UnknownFormat (ClientWorkoutsController#info is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+actionpack (5.2.3) lib/action_controller/metal/implicit_render.rb:55:in `default_render'
+actionpack (5.2.3) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+actionpack (5.2.3) lib/action_controller/metal/basic_implicit_render.rb:6:in `tap'
+actionpack (5.2.3) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (5.2.3) lib/abstract_controller/base.rb:194:in `process_action'
+actionpack (5.2.3) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.2.3) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (5.2.3) lib/active_support/callbacks.rb:132:in `run_callbacks'
+actionpack (5.2.3) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.3) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.3) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.3) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.3) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.3) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.3) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.3) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.3) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.3) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.3) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.3) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.3) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.7) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.7) lib/rack/etag.rb:25:in `call'
+rack (2.0.7) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.7) lib/rack/head.rb:12:in `call'
+actionpack (5.2.3) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.7) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.7) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.3) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/client_workouts/client_info/1" for 127.0.0.1 at 2019-06-07 00:23:18 +0800
+Processing by ClientWorkoutsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mClientWorkout Load (0.4ms)[0m  [1m[34mSELECT  "client_workouts".* FROM "client_workouts" WHERE "client_workouts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/client_workouts_controller.rb:76
+  Rendering client_workouts/show.html.erb within layouts/application
+  Rendered client_workouts/show.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 88ms (Views: 49.4ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/client_workouts" for 127.0.0.1 at 2019-06-07 00:23:21 +0800
+Processing by ClientWorkoutsController#index as HTML
+  Rendering client_workouts/index.html.erb within layouts/application
+  [1m[36mClientWorkout Load (4.5ms)[0m  [1m[34mSELECT "client_workouts".* FROM "client_workouts"[0m
+  ↳ app/views/client_workouts/index.html.erb:24
+  Rendered client_workouts/index.html.erb within layouts/application (11.3ms)
+Completed 200 OK in 106ms (Views: 99.2ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/client_workouts/client_info/1" for 127.0.0.1 at 2019-06-07 00:23:23 +0800
+Processing by ClientWorkoutsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mClientWorkout Load (0.3ms)[0m  [1m[34mSELECT  "client_workouts".* FROM "client_workouts" WHERE "client_workouts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/client_workouts_controller.rb:76
+  Rendering client_workouts/show.html.erb within layouts/application
+  Rendered client_workouts/show.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 82ms (Views: 77.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/client_workouts" for 127.0.0.1 at 2019-06-07 00:23:24 +0800
+Processing by ClientWorkoutsController#index as HTML
+  Rendering client_workouts/index.html.erb within layouts/application
+  [1m[36mClientWorkout Load (0.2ms)[0m  [1m[34mSELECT "client_workouts".* FROM "client_workouts"[0m
+  ↳ app/views/client_workouts/index.html.erb:24
+  Rendered client_workouts/index.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 68ms (Views: 66.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/client_workouts/client_info/1" for 127.0.0.1 at 2019-06-07 00:23:26 +0800
+Processing by ClientWorkoutsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mClientWorkout Load (0.3ms)[0m  [1m[34mSELECT  "client_workouts".* FROM "client_workouts" WHERE "client_workouts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/client_workouts_controller.rb:76
+  Rendering client_workouts/show.html.erb within layouts/application
+  Rendered client_workouts/show.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 58ms (Views: 54.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/client_workouts" for 127.0.0.1 at 2019-06-07 00:23:28 +0800
+Processing by ClientWorkoutsController#index as HTML
+  Rendering client_workouts/index.html.erb within layouts/application
+  [1m[36mClientWorkout Load (0.4ms)[0m  [1m[34mSELECT "client_workouts".* FROM "client_workouts"[0m
+  ↳ app/views/client_workouts/index.html.erb:24
+  Rendered client_workouts/index.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 51ms (Views: 48.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/client_workouts" for 127.0.0.1 at 2019-06-07 00:26:11 +0800
+Processing by ClientWorkoutsController#index as HTML
+  Rendering client_workouts/index.html.erb within layouts/application
+  [1m[36mClientWorkout Load (0.5ms)[0m  [1m[34mSELECT "client_workouts".* FROM "client_workouts"[0m
+  ↳ app/views/client_workouts/index.html.erb:24
+  Rendered client_workouts/index.html.erb within layouts/application (28.8ms)
+Completed 200 OK in 96ms (Views: 90.3ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/client_workouts/client_info/1" for 127.0.0.1 at 2019-06-07 00:26:14 +0800
+Processing by ClientWorkoutsController#client_info as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mClientWorkout Load (0.4ms)[0m  [1m[34mSELECT  "client_workouts".* FROM "client_workouts" WHERE "client_workouts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/client_workouts_controller.rb:20
+  Rendering client_workouts/client_info.html.erb within layouts/application
+  [1m[36mClient Load (32.0ms)[0m  [1m[34mSELECT "clients".* FROM "clients" WHERE "clients"."name" = ?[0m  [["name", "Shania Aman"]]
+  ↳ app/views/client_workouts/_client_list.html.erb:26
+  Rendered client_workouts/_client_list.html.erb (54.1ms)
+  Rendered client_workouts/client_info.html.erb within layouts/application (93.8ms)
+Completed 200 OK in 137ms (Views: 97.2ms | ActiveRecord: 34.6ms)
+
+
+Started GET "/client_workouts/client_info/1" for 127.0.0.1 at 2019-06-07 00:26:38 +0800
+Processing by ClientWorkoutsController#client_info as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mClientWorkout Load (0.2ms)[0m  [1m[34mSELECT  "client_workouts".* FROM "client_workouts" WHERE "client_workouts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/client_workouts_controller.rb:20
+  Rendering client_workouts/client_info.html.erb within layouts/application
+  [1m[36mClient Load (0.2ms)[0m  [1m[34mSELECT "clients".* FROM "clients" WHERE "clients"."name" = ?[0m  [["name", "Shania Aman"]]
+  ↳ app/views/client_workouts/_client_list.html.erb:26
+  Rendered client_workouts/_client_list.html.erb (3.5ms)
+  Rendered client_workouts/client_info.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 50ms (Views: 47.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/client_workouts" for 127.0.0.1 at 2019-06-07 00:26:41 +0800
+Processing by ClientWorkoutsController#index as HTML
+  Rendering client_workouts/index.html.erb within layouts/application
+  [1m[36mClientWorkout Load (0.3ms)[0m  [1m[34mSELECT "client_workouts".* FROM "client_workouts"[0m
+  ↳ app/views/client_workouts/index.html.erb:24
+  Rendered client_workouts/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 46ms (Views: 43.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/client_workouts/client_info/1" for 127.0.0.1 at 2019-06-07 00:26:42 +0800
+Processing by ClientWorkoutsController#client_info as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mClientWorkout Load (0.2ms)[0m  [1m[34mSELECT  "client_workouts".* FROM "client_workouts" WHERE "client_workouts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/client_workouts_controller.rb:20
+  Rendering client_workouts/client_info.html.erb within layouts/application
+  [1m[36mClient Load (0.2ms)[0m  [1m[34mSELECT "clients".* FROM "clients" WHERE "clients"."name" = ?[0m  [["name", "Shania Aman"]]
+  ↳ app/views/client_workouts/_client_list.html.erb:26
+  Rendered client_workouts/_client_list.html.erb (4.5ms)
+  Rendered client_workouts/client_info.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 52ms (Views: 48.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/clients/1" for 127.0.0.1 at 2019-06-07 00:26:44 +0800
+Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mClient Load (0.3ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/clients_controller.rb:74
+  Rendering clients/show.html.erb within layouts/application
+  Rendered clients/show.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 50ms (Views: 47.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/clients" for 127.0.0.1 at 2019-06-07 00:26:56 +0800
+Processing by ClientsController#index as HTML
+  Rendering clients/index.html.erb within layouts/application
+  [1m[36mClient Load (0.4ms)[0m  [1m[34mSELECT "clients".* FROM "clients"[0m
+  ↳ app/views/clients/index.html.erb:26
+  Rendered clients/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 54ms (Views: 38.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/clients/new" for 127.0.0.1 at 2019-06-07 00:26:59 +0800
+Processing by ClientsController#new as HTML
+  Rendering clients/new.html.erb within layouts/application
+  Rendered clients/_form.html.erb (7.0ms)
+  Rendered clients/new.html.erb within layouts/application (19.2ms)
+Completed 200 OK in 109ms (Views: 62.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/clients" for 127.0.0.1 at 2019-06-07 00:27:30 +0800
+Processing by ClientsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IsM1iPmFymXW3NeCksyIXmZ+h+cN/2Q5kWCXwkI0GkLTxsQyYphodPP8N4bikfm3hoatk87emvYWczepWt4s9w==", "client"=>{"name"=>"Max Dirk", "address"=>"Triangulo", "curr_weight"=>"67", "height"=>"190", "gender"=>"Mail", "email_add"=>"maxdirk@gmail.com"}, "commit"=>"Create Client"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/clients_controller.rb:37
+  [1m[36mClient Create (7.6ms)[0m  [1m[32mINSERT INTO "clients" ("name", "address", "curr_weight", "height", "gender", "email_add", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Max Dirk"], ["address", "Triangulo"], ["curr_weight", 67.0], ["height", 190.0], ["gender", "Mail"], ["email_add", "maxdirk@gmail.com"], ["created_at", "2019-06-06 16:27:30.720139"], ["updated_at", "2019-06-06 16:27:30.720139"]]
+  ↳ app/controllers/clients_controller.rb:37
+  [1m[35m (4.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/clients_controller.rb:37
+Redirected to http://localhost:3000/clients/2
+Completed 302 Found in 26ms (ActiveRecord: 12.2ms)
+
+
+Started GET "/clients/2" for 127.0.0.1 at 2019-06-07 00:27:30 +0800
+Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mClient Load (0.7ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/clients_controller.rb:74
+  Rendering clients/show.html.erb within layouts/application
+  Rendered clients/show.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 54ms (Views: 45.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/clients" for 127.0.0.1 at 2019-06-07 00:27:32 +0800
+Processing by ClientsController#index as HTML
+  Rendering clients/index.html.erb within layouts/application
+  [1m[36mClient Load (0.3ms)[0m  [1m[34mSELECT "clients".* FROM "clients"[0m
+  ↳ app/views/clients/index.html.erb:26
+  Rendered clients/index.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 52ms (Views: 50.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/client_workouts" for 127.0.0.1 at 2019-06-07 00:27:38 +0800
+Processing by ClientWorkoutsController#index as HTML
+  Rendering client_workouts/index.html.erb within layouts/application
+  [1m[36mClientWorkout Load (0.1ms)[0m  [1m[34mSELECT "client_workouts".* FROM "client_workouts"[0m
+  ↳ app/views/client_workouts/index.html.erb:24
+  Rendered client_workouts/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 63ms (Views: 61.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/client_workouts/client_info/1" for 127.0.0.1 at 2019-06-07 00:27:40 +0800
+Processing by ClientWorkoutsController#client_info as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mClientWorkout Load (0.2ms)[0m  [1m[34mSELECT  "client_workouts".* FROM "client_workouts" WHERE "client_workouts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/client_workouts_controller.rb:20
+  Rendering client_workouts/client_info.html.erb within layouts/application
+  [1m[36mClient Load (0.2ms)[0m  [1m[34mSELECT "clients".* FROM "clients" WHERE "clients"."name" = ?[0m  [["name", "Shania Aman"]]
+  ↳ app/views/client_workouts/_client_list.html.erb:26
+  Rendered client_workouts/_client_list.html.erb (7.5ms)
+  Rendered client_workouts/client_info.html.erb within layouts/application (13.2ms)
+Completed 200 OK in 55ms (Views: 52.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/client_workouts" for 127.0.0.1 at 2019-06-07 00:27:41 +0800
+Processing by ClientWorkoutsController#index as HTML
+  Rendering client_workouts/index.html.erb within layouts/application
+  [1m[36mClientWorkout Load (0.2ms)[0m  [1m[34mSELECT "client_workouts".* FROM "client_workouts"[0m
+  ↳ app/views/client_workouts/index.html.erb:24
+  Rendered client_workouts/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 64ms (Views: 61.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/client_workouts/client_info/1" for 127.0.0.1 at 2019-06-07 00:27:47 +0800
+Processing by ClientWorkoutsController#client_info as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mClientWorkout Load (0.3ms)[0m  [1m[34mSELECT  "client_workouts".* FROM "client_workouts" WHERE "client_workouts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/client_workouts_controller.rb:20
+  Rendering client_workouts/client_info.html.erb within layouts/application
+  [1m[36mClient Load (0.2ms)[0m  [1m[34mSELECT "clients".* FROM "clients" WHERE "clients"."name" = ?[0m  [["name", "Shania Aman"]]
+  ↳ app/views/client_workouts/_client_list.html.erb:26
+  Rendered client_workouts/_client_list.html.erb (10.1ms)
+  Rendered client_workouts/client_info.html.erb within layouts/application (12.9ms)
+Completed 200 OK in 53ms (Views: 49.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/client_workouts" for 127.0.0.1 at 2019-06-07 00:27:49 +0800
+Processing by ClientWorkoutsController#index as HTML
+  Rendering client_workouts/index.html.erb within layouts/application
+  [1m[36mClientWorkout Load (0.2ms)[0m  [1m[34mSELECT "client_workouts".* FROM "client_workouts"[0m
+  ↳ app/views/client_workouts/index.html.erb:24
+  Rendered client_workouts/index.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 44ms (Views: 42.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/client_workouts" for 127.0.0.1 at 2019-06-07 00:31:53 +0800
+Processing by ClientWorkoutsController#index as HTML
+  Rendering client_workouts/index.html.erb within layouts/application
+  [1m[36mClientWorkout Load (0.3ms)[0m  [1m[34mSELECT "client_workouts".* FROM "client_workouts"[0m
+  ↳ app/views/client_workouts/index.html.erb:24
+  Rendered client_workouts/index.html.erb within layouts/application (17.6ms)
+Completed 200 OK in 56ms (Views: 50.9ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/client_workouts/trainer_info/1" for 127.0.0.1 at 2019-06-07 00:31:56 +0800
+Processing by ClientWorkoutsController#trainer_info as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mClientWorkout Load (0.3ms)[0m  [1m[34mSELECT  "client_workouts".* FROM "client_workouts" WHERE "client_workouts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/client_workouts_controller.rb:24
+  Rendering client_workouts/trainer_info.html.erb within layouts/application
+  [1m[36mTrainer Load (39.3ms)[0m  [1m[34mSELECT "trainers".* FROM "trainers" WHERE "trainers"."name" = ?[0m  [["name", "Alexa Chu"]]
+  ↳ app/views/client_workouts/_trainer_list.html.erb:26
+  Rendered client_workouts/_trainer_list.html.erb (61.6ms)
+  Rendered client_workouts/trainer_info.html.erb within layouts/application (201.7ms)
+Completed 200 OK in 248ms (Views: 204.0ms | ActiveRecord: 40.5ms)
+
+
+Started GET "/trainers/1" for 127.0.0.1 at 2019-06-07 00:32:00 +0800
+Processing by TrainersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTrainer Load (0.3ms)[0m  [1m[34mSELECT  "trainers".* FROM "trainers" WHERE "trainers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/trainers_controller.rb:74
+  Rendering trainers/show.html.erb within layouts/application
+  Rendered trainers/show.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 48ms (Views: 42.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/trainers" for 127.0.0.1 at 2019-06-07 00:32:12 +0800
+Processing by TrainersController#index as HTML
+  Rendering trainers/index.html.erb within layouts/application
+  [1m[36mTrainer Load (0.5ms)[0m  [1m[34mSELECT "trainers".* FROM "trainers"[0m
+  ↳ app/views/trainers/index.html.erb:26
+  Rendered trainers/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 35ms (Views: 33.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/trainers/new" for 127.0.0.1 at 2019-06-07 00:32:14 +0800
+Processing by TrainersController#new as HTML
+  Rendering trainers/new.html.erb within layouts/application
+  Rendered trainers/_form.html.erb (10.0ms)
+  Rendered trainers/new.html.erb within layouts/application (17.3ms)
+Completed 200 OK in 83ms (Views: 81.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/trainers" for 127.0.0.1 at 2019-06-07 00:32:49 +0800
+Processing by TrainersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BbwT4F/Rgdq5AkTKKNawmzKdh75LDOGwJxXQJEHBpe33cqQC2tCfFs0XBJWBXLkJEJcjo0YSrv7lpmm/1Q2aWA==", "trainer"=>{"name"=>"Damon Fox", "address"=>"Bagumbayan Sur", "curr_weight"=>"70", "height"=>"198", "gender"=>"Male", "email_add"=>"damonfox@gmail.com"}, "commit"=>"Create Trainer"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/trainers_controller.rb:37
+  [1m[36mTrainer Create (1.0ms)[0m  [1m[32mINSERT INTO "trainers" ("name", "address", "curr_weight", "height", "gender", "email_add", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Damon Fox"], ["address", "Bagumbayan Sur"], ["curr_weight", 70.0], ["height", 198.0], ["gender", "Male"], ["email_add", "damonfox@gmail.com"], ["created_at", "2019-06-06 16:32:49.920715"], ["updated_at", "2019-06-06 16:32:49.920715"]]
+  ↳ app/controllers/trainers_controller.rb:37
+  [1m[35m (37.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/trainers_controller.rb:37
+Redirected to http://localhost:3000/trainers/2
+Completed 302 Found in 46ms (ActiveRecord: 39.0ms)
+
+
+Started GET "/trainers/2" for 127.0.0.1 at 2019-06-07 00:32:50 +0800
+Processing by TrainersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTrainer Load (0.2ms)[0m  [1m[34mSELECT  "trainers".* FROM "trainers" WHERE "trainers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/trainers_controller.rb:74
+  Rendering trainers/show.html.erb within layouts/application
+  Rendered trainers/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 39ms (Views: 36.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/trainers" for 127.0.0.1 at 2019-06-07 00:32:51 +0800
+Processing by TrainersController#index as HTML
+  Rendering trainers/index.html.erb within layouts/application
+  [1m[36mTrainer Load (0.2ms)[0m  [1m[34mSELECT "trainers".* FROM "trainers"[0m
+  ↳ app/views/trainers/index.html.erb:26
+  Rendered trainers/index.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 61ms (Views: 59.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/client_workouts" for 127.0.0.1 at 2019-06-07 00:32:58 +0800
+Processing by ClientWorkoutsController#index as HTML
+  Rendering client_workouts/index.html.erb within layouts/application
+  [1m[36mClientWorkout Load (0.2ms)[0m  [1m[34mSELECT "client_workouts".* FROM "client_workouts"[0m
+  ↳ app/views/client_workouts/index.html.erb:24
+  Rendered client_workouts/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 43ms (Views: 40.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/client_workouts/new" for 127.0.0.1 at 2019-06-07 00:33:00 +0800
+Processing by ClientWorkoutsController#new as HTML
+  Rendering client_workouts/new.html.erb within layouts/application
+  Rendered client_workouts/_form.html.erb (45.6ms)
+  Rendered client_workouts/new.html.erb within layouts/application (47.3ms)
+Completed 200 OK in 102ms (Views: 99.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/client_workouts" for 127.0.0.1 at 2019-06-07 00:33:19 +0800
+Processing by ClientWorkoutsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2BsNJs5ZH6VDWd1UclAtMPffDxRzUw1G8D/zBEOtNSGaRHayk8hhIRs559w5NTZGHgJyQTVoK84BU3qVQA1OeA==", "client_workout"=>{"client_name"=>"Max Kirk", "trainer"=>"Damon Fox", "duration_mins"=>"60", "date_of_workout(1i)"=>"2019", "date_of_workout(2i)"=>"6", "date_of_workout(3i)"=>"6", "paid_amount"=>"300"}, "commit"=>"Create Client workout"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/client_workouts_controller.rb:47
+  [1m[36mClientWorkout Create (0.8ms)[0m  [1m[32mINSERT INTO "client_workouts" ("client_name", "trainer", "duration_mins", "date_of_workout", "paid_amount", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["client_name", "Max Kirk"], ["trainer", "Damon Fox"], ["duration_mins", 60], ["date_of_workout", "2019-06-06"], ["paid_amount", 300.0], ["created_at", "2019-06-06 16:33:19.336332"], ["updated_at", "2019-06-06 16:33:19.336332"]]
+  ↳ app/controllers/client_workouts_controller.rb:47
+  [1m[35m (5.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/client_workouts_controller.rb:47
+Redirected to http://localhost:3000/client_workouts/2
+Completed 302 Found in 14ms (ActiveRecord: 6.9ms)
+
+
+Started GET "/client_workouts/2" for 127.0.0.1 at 2019-06-07 00:33:19 +0800
+Processing by ClientWorkoutsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mClientWorkout Load (0.2ms)[0m  [1m[34mSELECT  "client_workouts".* FROM "client_workouts" WHERE "client_workouts"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/client_workouts_controller.rb:84
+  Rendering client_workouts/show.html.erb within layouts/application
+  Rendered client_workouts/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 62ms (Views: 40.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/client_workouts" for 127.0.0.1 at 2019-06-07 00:33:21 +0800
+Processing by ClientWorkoutsController#index as HTML
+  Rendering client_workouts/index.html.erb within layouts/application
+  [1m[36mClientWorkout Load (0.2ms)[0m  [1m[34mSELECT "client_workouts".* FROM "client_workouts"[0m
+  ↳ app/views/client_workouts/index.html.erb:24
+  Rendered client_workouts/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 54ms (Views: 52.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/client_workouts/client_info/2" for 127.0.0.1 at 2019-06-07 00:33:22 +0800
+Processing by ClientWorkoutsController#client_info as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mClientWorkout Load (0.2ms)[0m  [1m[34mSELECT  "client_workouts".* FROM "client_workouts" WHERE "client_workouts"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/client_workouts_controller.rb:20
+  Rendering client_workouts/client_info.html.erb within layouts/application
+  [1m[36mClient Load (0.3ms)[0m  [1m[34mSELECT "clients".* FROM "clients" WHERE "clients"."name" = ?[0m  [["name", "Max Kirk"]]
+  ↳ app/views/client_workouts/_client_list.html.erb:26
+  Rendered client_workouts/_client_list.html.erb (2.7ms)
+  Rendered client_workouts/client_info.html.erb within layouts/application (167.1ms)
+Completed 200 OK in 207ms (Views: 202.5ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/clients/find" for 127.0.0.1 at 2019-06-07 00:33:26 +0800
+Processing by ClientsController#find as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"aVj105UH+l5G3yuOdwDA2lOn3BfR5OSEgIgeoRZAZAZvwOiXraiXF+GIUjjnjSqesU6IzL56cfkz7JWr/I5n7Q==", "search_string"=>"Max", "commit"=>"search"}
+  Rendering clients/index.html.erb within layouts/application
+  [1m[36mClient Load (0.3ms)[0m  [1m[34mSELECT "clients".* FROM "clients" WHERE (LOWER(name) LIKE '%max%')[0m
+  ↳ app/views/clients/index.html.erb:26
+  Rendered clients/index.html.erb within layouts/application (21.5ms)
+Completed 200 OK in 70ms (Views: 67.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/client_workouts/2/edit" for 127.0.0.1 at 2019-06-07 00:33:32 +0800
+Processing by ClientWorkoutsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mClientWorkout Load (0.2ms)[0m  [1m[34mSELECT  "client_workouts".* FROM "client_workouts" WHERE "client_workouts"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/client_workouts_controller.rb:84
+  Rendering client_workouts/edit.html.erb within layouts/application
+  Rendered client_workouts/_form.html.erb (10.0ms)
+  Rendered client_workouts/edit.html.erb within layouts/application (16.1ms)
+Completed 200 OK in 50ms (Views: 47.1ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/client_workouts/2" for 127.0.0.1 at 2019-06-07 00:33:38 +0800
+Processing by ClientWorkoutsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BoCdjX7hEKG0DbznOSulbN2/9JH5QX13Usor53lPSCkOTyBkY6Y7Jlh7WXplBSSjCBRPPHiPXsa5YGQyq8z8Vw==", "client_workout"=>{"client_name"=>"Max Dirk", "trainer"=>"Damon Fox", "duration_mins"=>"60", "date_of_workout(1i)"=>"2019", "date_of_workout(2i)"=>"6", "date_of_workout(3i)"=>"6", "paid_amount"=>"300.0"}, "commit"=>"Update Client workout", "id"=>"2"}
+  [1m[36mClientWorkout Load (0.1ms)[0m  [1m[34mSELECT  "client_workouts".* FROM "client_workouts" WHERE "client_workouts"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/client_workouts_controller.rb:84
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/client_workouts_controller.rb:61
+  [1m[36mClientWorkout Update (0.9ms)[0m  [1m[33mUPDATE "client_workouts" SET "client_name" = ?, "updated_at" = ? WHERE "client_workouts"."id" = ?[0m  [["client_name", "Max Dirk"], ["updated_at", "2019-06-06 16:33:38.025930"], ["id", 2]]
+  ↳ app/controllers/client_workouts_controller.rb:61
+  [1m[35m (26.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/client_workouts_controller.rb:61
+Redirected to http://localhost:3000/client_workouts/2
+Completed 302 Found in 349ms (ActiveRecord: 27.3ms)
+
+
+Started GET "/client_workouts/2" for 127.0.0.1 at 2019-06-07 00:33:38 +0800
+Processing by ClientWorkoutsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mClientWorkout Load (0.2ms)[0m  [1m[34mSELECT  "client_workouts".* FROM "client_workouts" WHERE "client_workouts"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/client_workouts_controller.rb:84
+  Rendering client_workouts/show.html.erb within layouts/application
+  Rendered client_workouts/show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 51ms (Views: 46.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/client_workouts" for 127.0.0.1 at 2019-06-07 00:33:39 +0800
+Processing by ClientWorkoutsController#index as HTML
+  Rendering client_workouts/index.html.erb within layouts/application
+  [1m[36mClientWorkout Load (0.2ms)[0m  [1m[34mSELECT "client_workouts".* FROM "client_workouts"[0m
+  ↳ app/views/client_workouts/index.html.erb:24
+  Rendered client_workouts/index.html.erb within layouts/application (8.5ms)
+Completed 200 OK in 61ms (Views: 59.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/client_workouts/client_info/2" for 127.0.0.1 at 2019-06-07 00:33:41 +0800
+Processing by ClientWorkoutsController#client_info as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mClientWorkout Load (0.2ms)[0m  [1m[34mSELECT  "client_workouts".* FROM "client_workouts" WHERE "client_workouts"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/client_workouts_controller.rb:20
+  Rendering client_workouts/client_info.html.erb within layouts/application
+  [1m[36mClient Load (0.2ms)[0m  [1m[34mSELECT "clients".* FROM "clients" WHERE "clients"."name" = ?[0m  [["name", "Max Dirk"]]
+  ↳ app/views/client_workouts/_client_list.html.erb:26
+  Rendered client_workouts/_client_list.html.erb (7.9ms)
+  Rendered client_workouts/client_info.html.erb within layouts/application (13.9ms)
+Completed 200 OK in 63ms (Views: 60.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/client_workouts/trainer_info/2" for 127.0.0.1 at 2019-06-07 00:33:43 +0800
+Processing by ClientWorkoutsController#trainer_info as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mClientWorkout Load (0.3ms)[0m  [1m[34mSELECT  "client_workouts".* FROM "client_workouts" WHERE "client_workouts"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/client_workouts_controller.rb:24
+  Rendering client_workouts/trainer_info.html.erb within layouts/application
+  [1m[36mTrainer Load (0.2ms)[0m  [1m[34mSELECT "trainers".* FROM "trainers" WHERE "trainers"."name" = ?[0m  [["name", "Damon Fox"]]
+  ↳ app/views/client_workouts/_trainer_list.html.erb:26
+  Rendered client_workouts/_trainer_list.html.erb (5.5ms)
+  Rendered client_workouts/trainer_info.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 45ms (Views: 41.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/client_workouts/trainer_info/1" for 127.0.0.1 at 2019-06-07 00:33:56 +0800
+Processing by ClientWorkoutsController#trainer_info as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mClientWorkout Load (0.2ms)[0m  [1m[34mSELECT  "client_workouts".* FROM "client_workouts" WHERE "client_workouts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/client_workouts_controller.rb:24
+  Rendering client_workouts/trainer_info.html.erb within layouts/application
+  [1m[36mTrainer Load (0.3ms)[0m  [1m[34mSELECT "trainers".* FROM "trainers" WHERE "trainers"."name" = ?[0m  [["name", "Alexa Chu"]]
+  ↳ app/views/client_workouts/_trainer_list.html.erb:26
+  Rendered client_workouts/_trainer_list.html.erb (4.9ms)
+  Rendered client_workouts/trainer_info.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 43ms (Views: 39.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/trainers/1" for 127.0.0.1 at 2019-06-07 00:33:57 +0800
+Processing by TrainersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTrainer Load (0.2ms)[0m  [1m[34mSELECT  "trainers".* FROM "trainers" WHERE "trainers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/trainers_controller.rb:74
+  Rendering trainers/show.html.erb within layouts/application
+  Rendered trainers/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 59ms (Views: 55.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/client_workouts/client_info/1" for 127.0.0.1 at 2019-06-07 00:34:01 +0800
+Processing by ClientWorkoutsController#client_info as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mClientWorkout Load (0.2ms)[0m  [1m[34mSELECT  "client_workouts".* FROM "client_workouts" WHERE "client_workouts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/client_workouts_controller.rb:20
+  Rendering client_workouts/client_info.html.erb within layouts/application
+  [1m[36mClient Load (0.2ms)[0m  [1m[34mSELECT "clients".* FROM "clients" WHERE "clients"."name" = ?[0m  [["name", "Shania Aman"]]
+  ↳ app/views/client_workouts/_client_list.html.erb:26
+  Rendered client_workouts/_client_list.html.erb (9.4ms)
+  Rendered client_workouts/client_info.html.erb within layouts/application (13.9ms)
+Completed 200 OK in 51ms (Views: 47.7ms | ActiveRecord: 0.3ms)
+
+
